@@ -10,7 +10,7 @@ import pymongo
 #####
 import html
 
-app = Flask(__name__, template_folder="app/templates", static_host="0.0.0.0")
+app = Flask(__name__, template_folder="app/templates")
 
 API_DATA = dict(get("https://api.apis.guru/v2/list.json").json())
 
