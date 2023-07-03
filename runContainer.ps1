@@ -1,4 +1,4 @@
-docker build ./Dockerfile -t apuminerImager
+docker build ./Dockerfile -t apuminer-imager
 
-docker run -d -p 5000:5000 --name apuminerContainer apuminerImage
+docker run -d -p 5000:5000 --name apuminer-container apuminer-image
 
