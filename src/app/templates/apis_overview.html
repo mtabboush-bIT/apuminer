@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Overview</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 10px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .grid-item {
+            border: 1px solid #ccc;
+            padding: 20px;
+            font-size: 1.2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>APIs Overview</h1>
+    <ul class="grid">
+        {% for api in apis %}
+        <a class="grid-item" href="{{url_for('detailview', apikey=api)}}"><li >{{api}}</li></a>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
