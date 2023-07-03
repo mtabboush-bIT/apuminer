@@ -1,12 +1,12 @@
-$ErrorOccured = $false
-
-try
-{
-    docker build ./src -t apuminer-imager
+$ErrorOccurred = $false
+try {
+    docker build ./src -t apuminer-image
 }
 catch {
-    "Can't Build Container"
+    $ErrorOccurred = $true
+    Write-Host "Can't Build Container"
 }
 
-if (!ErrorOccured) { docker run -d -p 5000:5000 --name apuminer-container apuminer-image }
-
+if (!$ErrorOccurred) {
+    docker run -d -p 5000:5000 --name apuminer-container apuminer-image
+}
