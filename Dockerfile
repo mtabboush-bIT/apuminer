@@ -2,7 +2,8 @@ FROM python:latest
 
 MAINTAINER Mouaz
 
-COPY . /usr/src/app
+# cp ignore
+COPY ./src /usr/src/app
 
 RUN pip install -r /usr/src/app/requirements.txt
 

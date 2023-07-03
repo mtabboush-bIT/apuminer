@@ -1,6 +1,6 @@
 $ErrorOccurred = $false
 try {
-    docker build ./src -t apuminer-image
+    docker build . -t apuminer-image
 }
 catch {
     $ErrorOccurred = $true
