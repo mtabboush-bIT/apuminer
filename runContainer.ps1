@@ -1,6 +1,6 @@
 
-docker image rm $(docker image ls -q)
 docker container rm $(docker container ls -q)
+docker image rm $(docker image ls -q)
 
 
 docker build . -t apuminer-image
