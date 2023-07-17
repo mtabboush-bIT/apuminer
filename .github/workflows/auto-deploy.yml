@@ -1,0 +1,16 @@
+name: 'Auto Integration'
+description: 'A GitHub action that runs a local bash script to build a docker image, remove old containers and run new one'
+author: 'Mouaz Tabboush'
+inputs:
+  token:
+    required: false
+    description: 'Defines the token to use to execute the git API requests with, uses `env.GITHUB_TOKEN` by default
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: ./test.bash
+      shell: bash
